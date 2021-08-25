@@ -21,7 +21,7 @@ jobs:
       run: |
          docker login -u vdeleon11 -p Jzxka81fg
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag vdeleon11/cmpsc90dadockerimage:v20210825
+      run: docker build . --file Dockerfile --tag vdeleon11/cmpsc90dadockerimage:${GITHUB_SHA::8}
       
     - name: Docker push
-      run: docker push vdeleon11/cmpsc90dadockerimage:v20210825
+      run: docker push vdeleon11/cmpsc90dadockerimage:${GITHUB_SHA::8}
