@@ -19,7 +19,7 @@ jobs:
         DOCKER_USER: vdeleon11
         DOCKER_PASSWORD: Jzxka81fg
       run: |
-         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
+         docker login -u vdeleon11 -p Jzxka81fg
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag vdeleon11/cmpsc90dadockerimage:v20210825
       
