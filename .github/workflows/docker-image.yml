@@ -21,7 +21,7 @@ jobs:
       run: |
          docker login -u $DOCKER_USER -p $DOCKER_PASSWORD 
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag vdeleon11/cmpsc90dadockerimage:$(date +%s)
+      run: docker build . --file Dockerfile --tag vdeleon11/cmpsc90dadockerimage:v20210825
       
     - name: Docker push
       run: docker push vdeleon11/cmpsc90dadockerimage
