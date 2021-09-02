@@ -1,6 +1,7 @@
-FROM dddlab/python-notebook:v20200331-df7ed42-94fdd01b492f
+ARG BASE_IMAGE=jupyter/scipy-notebook:latest
+FROM $BASE_IMAGE
 
-LABEL maintainer="Patrick Windmiller <sysadmin@pstat.ucsb.edu>"
+LABEL maintainer="Vanessa De Leon <v_deleon@ucsb.edu>"
 
 USER root
 
@@ -43,8 +44,7 @@ RUN \
         pytest \
         tweepy \
         PTable \
-        pytest-custom-report \
-        ipympl \
+        pytest-custom-report\ \
         datascience \
         jupyterlab 
     #conda install -c conda-forge nodejs && \
