@@ -57,7 +57,8 @@ ARG RPY2_CFFI_MODE=ABI
 # Install otter-grader 
 RUN pip install otter-grader==2.2.4
 RUN python -m pip install --upgrade pip
-RUN npm install crypto codemirror 
+RUN npm install -g npm@latest
+RUN npm install -g codemirror
 
 RUN fix-permissions $CONDA_DIR && \
     fix-permissions /home/$NB_USER
